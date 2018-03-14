@@ -10,35 +10,38 @@
     @font-face declarations
 */
 
-@font-face{
+@font-face {
     font-family: "Inter UI";
     font-weight: 400;
-    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2")
-         url("../fonts/Inter-UI-Regular.woff") format("woff")          
+    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2") url("../fonts/Inter-UI-Regular.woff") format("woff")
 }
-@font-face{
+
+@font-face {
     font-family: "Inter UI";
     font-weight: 700;
-    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2")
-         url("../fonts/Inter-UI-Regular.woff") format("woff")          
+    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2") url("../fonts/Inter-UI-Regular.woff") format("woff")
 }
-@font-face{
+
+@font-face {
     font-family: "Droid Serif";
     font-weight: 400;
     src: url("../fonts/DroidSerif-Regular-webfont.woff") format("woff")
 }
-@font-face{
+
+@font-face {
     font-family: "Droid Serif";
     font-weight: 400;
     font-style: italic;
     src: url("../fonts/DroidSerif-Regular-webfont.woff") format("woff")
 }
-@font-face{
+
+@font-face {
     font-family: "Droid Serif";
     font-weight: 700;
     src: url("../fonts/DroidSerif-Regular-webfont.woff") format("woff")
 }
-@font-face{
+
+@font-face {
     font-family: "Droid Serif";
     font-weight: 700;
     font-style: italic;
@@ -49,12 +52,11 @@ html {
     font-size: 16px;
     line-height: 1.5;
     /* font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif; */
-    font-family: "Droid Serif",Georgia, serif;
+    font-family: "Droid Serif", Georgia, serif;
     color: #5C6366;
     padding: 48px 24px 24px;
-    -webkit-font-smoothing : antialiased;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
 }
 
 body {
@@ -103,7 +105,7 @@ h1 {
     font-size: 36px;
     font-weight: normal;
     line-height: 40px;
-    margin: 0 0 48px;
+    margin: 0 0 24px;
 }
 
 h2 {
@@ -117,39 +119,31 @@ h3 {
     line-height: 24px;
     margin: 0 0 24px;
 }
-h1,h2,h3{
-    color : #17181A;
+
+h1, h2, h3 {
+    color: #17181A;
     font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-h4,
-h5,
-h6 {
+
+h4, h5, h6 {
     font-size: 16px;
     line-height: 24px;
     margin: 0 0 24px;
 }
 
-*+h2{
-    margin-top:48px;
+*+h2 {
+    margin-top: 48px;
 }
 
-p,
-ol,
-ul,
-dl,
-table,
-address,
-figure {
+p, ol, ul, dl, table, address, figure {
     margin: 0 0 24px;
 }
 
-ul,
-ol {
+ul, ol {
     padding-left: 24px;
 }
 
-li ul,
-li ol {
+li ul, li ol {
     margin-bottom: 0;
 }
 
@@ -170,7 +164,7 @@ figcaption {
     font-size: 12px;
     line-height: 16px;
     padding-top: 8px;
-    color: Grey;
+
 }
 
 hr {
@@ -185,15 +179,71 @@ a {
     transition: all .1s ease-in-out;
 }
 
-a:visited,
-a:active {
+a:visited, a:active {
     color: #00E6A1;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
     color: #1ABAFF;
 }
+
+/* 
+    Components: Type
+    ---
+    Special typography classes
+*/
+
+.c-type-meta{
+    font-size: 14px;
+    font-family: "Inter UI", "Helvetica Neue",Helvetica,Arial,San-serif;
+    line-height: 16px;
+}
+
+
+/*
+    Components: Author
+*/
+
+.c-author{
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.c-author__image{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    margin-right: 16px;;
+}
+
+.c-author__caption{
+    padding-top:0;
+}
+
+.c-author__name,
+.c-author__meta{
+    margin-bottom: 0;
+}
+
+.c-author__meta{
+    font-size:14px;
+    font-family: "Inter UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 16px;
+    margin-top: 4px;
+}
+
+.c-author__name{
+    font-style: 16px;
+    line-height: 16px;
+}
+
+
+/* 
+    Utilities:Spacing
+    ---
+    Utility classes to put specific spacing values onto elements 
+*/
 
 /* Small devices (landscape phones, 576px and up) */
 
@@ -227,9 +277,7 @@ a:focus {
 */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
         color: #000 !important;
         /* Black prints faster:
@@ -237,8 +285,7 @@ a:focus {
         box-shadow: none !important;
         text-shadow: none !important;
     }
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
     a[href]:after {
@@ -251,15 +298,13 @@ a:focus {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
     pre {
         white-space: pre-wrap !important;
     }
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
@@ -270,18 +315,14 @@ a:focus {
     thead {
         display: table-header-group;
     }
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
