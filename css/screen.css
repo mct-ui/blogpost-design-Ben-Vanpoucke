@@ -57,6 +57,11 @@ html {
     padding: 48px 24px 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box
+}
+*,*:before,*:after
+{
+    box-sizing: inherit;
 }
 
 body {
@@ -164,7 +169,6 @@ figcaption {
     font-size: 12px;
     line-height: 16px;
     padding-top: 8px;
-
 }
 
 hr {
@@ -187,62 +191,8 @@ a:hover, a:focus {
     color: #1ABAFF;
 }
 
-/* 
-    Components: Type
-    ---
-    Special typography classes
-*/
-
-.c-type-meta{
-    font-size: 14px;
-    font-family: "Inter UI", "Helvetica Neue",Helvetica,Arial,San-serif;
-    line-height: 16px;
-}
-
-
 /*
-    Components: Author
-*/
-
-.c-author{
-    display: flex;
-    align-items: center;
-    margin-bottom: 48px;
-}
-
-.c-author__image{
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
-    margin-right: 16px;;
-}
-
-.c-author__caption{
-    padding-top:0;
-}
-
-.c-author__name,
-.c-author__meta{
-    margin-bottom: 0;
-}
-
-.c-author__meta{
-    font-size:14px;
-    font-family: "Inter UI","Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 16px;
-    margin-top: 4px;
-}
-
-.c-author__name{
-    font-style: 16px;
-    line-height: 16px;
-}
-
-
-/* 
-    Utilities:Spacing
-    ---
-    Utility classes to put specific spacing values onto elements 
+    elements
 */
 
 /* Small devices (landscape phones, 576px and up) */
@@ -256,18 +206,140 @@ a:hover, a:focus {
         padding: 48px 48px 24px;
     }
     h1 {
-        font-size: 58px;
-        line-height: 64px;
+        font-size: 46px;
+        line-height: 56px;
     }
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    h1{
+        font-size: 52px;
+        line-height: 64px;
+    }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {}
+
+
+/* 
+    Components: Type
+    ---
+    Special typography classes
+*/
+
+.c-type-meta {
+    font-size: 14px;
+    font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, San-serif;
+    line-height: 16px;
+}
+
+/*
+    Components: Article
+*/
+
+.c-article__header, .c-article__body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.c-article__header {
+    padding: 24px 24px 0;
+}
+
+.c-article__body {
+    padding: 0 24px;
+}
+
+
+
+.c-article__data{
+    font-style: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+@media(min-width:768px) {
+    .c-article__header {
+        padding: 48px 48px 24px;
+    }
+    .c-article__author {
+        padding-bottom: 24px;
+    }
+    .c-article__body {
+        padding: 24px 48px;
+    }
+}
+@media(min-width:992px) {
+
+    .c-article__author {
+        width:25%;
+        padding-bottom: 24px;
+    }
+    .c-article__body {
+        padding: 24px 48px;
+    }
+    .c-article__content {
+        width: 75%;
+    }
+}
+
+/*
+    Components: Author
+*/
+
+.c-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.c-author__image {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    margin-right: 16px;
+    ;
+}
+
+.c-author__caption {
+    padding-top: 0;
+}
+
+.c-author__name, .c-author__meta {
+    margin-bottom: 0;
+    line-height: 16px;
+}
+
+.c-author__meta {
+    font-size: 14px;
+    font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 4px;
+}
+
+.c-author__name {
+    font-style: 16px;
+}
+
+/* 
+    Utilities:Spacing
+    ---
+    Utility classes to put specific spacing values onto elements 
+*/
+
+/*
+    Utilities:max-width
+    ---
+    Utility classes to put specific spacing values onto elements 
+
+*/
+
+.u-max-width-sm{
+    max-width: 36em;
+    
+}
 
 /*
     Print styles.
